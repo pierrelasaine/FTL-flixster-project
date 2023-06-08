@@ -1,1 +1,34 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-color: #222222;
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+    .title {
+        align-self: center;
+    }
+
+    .movies {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .movie-row {
+        display: flex;
+        flex-direction: row;
+        flex: 4;
+        align-items: flex-start;
+    }
+
+    .movie-card {
+        flex: 1;
+    }
 
