@@ -183,6 +183,12 @@ let fakeMoviesAPI = {
 let firstMovie = fakeMoviesAPI.results[0]
 
 function generateRow() {
+    // Expected format:
+    //
+    //     <section class="movie-row">
+    //     </section>
+
+    // Create movie row section
     let movieRow = document.createElement("section")
     movieRow.classList.add("movie-row")
 
@@ -193,16 +199,17 @@ function generateRow() {
 }
 
 function generateCard(movieObject, targetDiv) {
-    /* Expected format:
-     *     <section class="movie-card">
-     *         <img/>
-     *         <div class="movie-rating">
-     *             <span class="star">⭐️</span>
-     *             <span class="rating-value"> {{rating}}</span>
-     *         </div>
-     *         <div class="movie-title"></div>
-     *     </section>
-     */
+    // Expected format:
+    //
+    //     <section class="movie-card">
+    //         <img/>
+    //         <div class="movie-rating">
+    //             <span class="star">⭐️</span>
+    //             <span class="rating-value"> {{rating}}</span>
+    //         </div>
+    //         <div class="movie-title"></div>
+    //     </section>
+
     // Create movie card section
     let movieCard = document.createElement("section");
     movieCard.classList.add("movie-card");
@@ -238,21 +245,14 @@ function generateCard(movieObject, targetDiv) {
     targetDiv.appendChild(movieCard);
 }
 
-let columnPosition = 0
-let rowCount = 0
+// Create five rows of four movies.
+let movies = fakeMoviesAPI.results.slice(0, 20)
 let targetDiv = generateRow()
 
-for (let movie of fakeMoviesAPI.results) {
-    // Create five rows of four movies.
-    generateCard(movie, targetDiv)
-    
-    columnPosition += 1
-    if (columnPosition === 4) {
+movies.forEach(function(movie, index) {
+    if (index % 4 === 0) {
         targetDiv = generateRow()
-        columnPosition = 0
-        rowCount += 1
-    } if (rowCount === 5) {
-        rowCount = 0
-        break
-    } 
-}
+    }
+
+    generateCard(movie, targetDiv)
+})
