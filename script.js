@@ -1,4 +1,5 @@
 const apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NzVjZmEyYzY0YjhjZjZjZDgzYjAxY2IxNDM4YTZmMiIsInN1YiI6IjY0ODEyY2M0NjQ3NjU0MDEyNDk2YmQ0YiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3h-MpbyEKM10nPqVEYpOvoWTcwk4wzjczpb-9bwitU4"
+const imageBaseUrl = 'https://image.tmdb.org/t/p/original'
 
 let url = "https://api.themoviedb.org/3/movie/latest"
 
@@ -180,8 +181,6 @@ let fakeMoviesAPI = {
     "total_results": 1951
 }
 
-let firstMovie = fakeMoviesAPI.results[0]
-
 function generateRow() {
     // Expected format:
     //
@@ -202,9 +201,9 @@ function generateCard(movieObject, targetDiv) {
     // Expected format:
     //
     //     <section class="movie-card">
-    //         <img/>
+    //         <img class="movie-poster/>
     //         <div class="movie-rating">
-    //             <span class="star">⭐️</span>
+    //             <span class="star">⭐️ </span>
     //             <span class="rating-value"> {{rating}}</span>
     //         </div>
     //         <div class="movie-title"></div>
@@ -216,6 +215,8 @@ function generateCard(movieObject, targetDiv) {
 
     // Create image element (src attribute can be added later)
     let movieImage = document.createElement("img");
+    movieImage.classList.add("movie-poster")
+    movieImage.src = imageBaseUrl.concat(movieObject.poster_path)
     movieCard.appendChild(movieImage);
 
     // Create and append movie rating div
