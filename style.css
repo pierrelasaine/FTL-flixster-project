@@ -44,7 +44,13 @@ body {
             .results-title {
                 margin-left: 1%;
                 margin-right: 1%;
+                
+                display: flex;
             }
+
+                .close-search-btn {
+                    margin-right: 1%;
+                }
 
         .movies-grid {
             display: flex;

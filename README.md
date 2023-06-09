@@ -23,7 +23,7 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
   - The button should have an id of `load-more-movies-btn`.
   - When clicked, the page should not refresh.
   - New movies should simply be added to the bottom
-- [ ] Allow users to search for movies and display them in a grid view
+- [x] Allow users to search for movies and display them in a grid view
   - There should be a search input element with an id of `search-input`
   - Users should be able to type into the input
   - When a user hits 'Enter', it should send a search request to the movies API
@@ -50,15 +50,15 @@ Deployed Application (optional): [Flixster Deployed Site](ADD_LINK_HERE)
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+My main difficulty here was a lack of comfort with JavaScript so the labs did not hlp with that much. Independent work blocks were most beneficial for this
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+I might style it more and try to improve the user experience.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I did not demo this week.
 
 ### Open-source libraries used
 
