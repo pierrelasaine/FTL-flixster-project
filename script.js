@@ -91,8 +91,6 @@ function generateMoviePage(url, page) {
                 targetDiv = generateRow()
             }
 
-            vytfv = 9
-
             generateCard(movie, targetDiv)
             resultsTitle.style.display = "block";
             loadMoreButton.style.display = "block";
