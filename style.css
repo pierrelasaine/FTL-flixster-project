@@ -10,44 +10,61 @@ body {
     flex-direction: column;
 }
 
-    .title {
-        align-self: center;
-    }
-
-    .now-playing {
-        margin-left: 1vh;
-        margin-right: 1vh;
+    .page {
+        max-width: 1111px;
+        margin: auto;
 
         display: flex;
         flex-direction: column;
     }
 
-        .now-playing b{
-            padding-left: 1%;
+        .title {
+            align-self: center;
         }
 
-    .movies {
-        display: flex;
-        flex-direction: column;
+        .now-playing {
+            margin-left: 1vh;
+            margin-right: 1vh;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+            .now-playing b{
+                padding-left: 1%;
+            }
+
+        .movies-grid {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-row {
+            margin-bottom: 1vh;
+
+            display: flex;
+            flex-direction: row;
+            flex: 4;
+            align-items: flex-start;
+        }
+
+        .movie-card {
+            padding-left: 1%;
+            padding-right: 1%;
+
+            flex: 1;
+        }
+
+        .movie-poster {
+            width: 100%;
+        }
+
+        #load-more-movies-btn {
+            max-width: 15vh;
+            margin-bottom: 1.5vh;
+            align-self: center;
+        }
+
+    @media max {
+        
     }
-
-    .movie-row {
-        margin-bottom: 1vh;
-
-        display: flex;
-        flex-direction: row;
-        flex: 4;
-        align-items: flex-start;
-    }
-
-    .movie-card {
-        padding-left: 1%;
-        padding-right: 1%;
-
-        flex: 1;
-    }
-
-    .movie-poster {
-        width: 100%;
-    }
-
